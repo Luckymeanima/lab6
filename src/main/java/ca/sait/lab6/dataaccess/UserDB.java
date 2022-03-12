@@ -19,7 +19,7 @@ public class UserDB {
         PreparedStatement ps = null;
         ResultSet rs = null;
         
-        String sql = "SELECT * FROM user INNER JOIN role ON role.role_id = user.role;";
+        String sql = "SELECT * FROM user INNER JOIN role ON role.role_id = user.role";
         
         try {
             ps = con.prepareStatement(sql);

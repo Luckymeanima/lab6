@@ -15,12 +15,13 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </head>
     <body>
-        <h1>User Management System</h1>
+
         
         
         <div class="Container">
             <div class="row">
                 <div class="col">
+                <h1>User Management System</h1>
                 <table class ="table">
                  <thead>
                     <tr>
@@ -32,7 +33,7 @@
                     </tr>
                  </thead>
             <tbody>
-                <c:forEach var="users" items="${users}">
+                <c:forEach var="user" items="${users}">
                     <tr>
                         <td>${user.email}</td>
                         <td>${user.firstName}</td>

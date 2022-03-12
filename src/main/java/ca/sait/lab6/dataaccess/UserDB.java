@@ -55,7 +55,7 @@ public class UserDB {
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
         ResultSet rs = null;
-        String sql = "SELECT * FROM user INNER JOIN role ON role.role_id = user.role WHERE email = ? LIMIT 1";
+        String sql = "SELECT * FROM user INNER JOIN role ON role.role_id = user.role WHERE active != 0";
         
         try {
             ps = con.prepareStatement(sql);
@@ -137,7 +137,7 @@ public class UserDB {
         ConnectionPool cp = ConnectionPool.getInstance();
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
-        String sql = "DELETE FROM user WHERE email = ?";
+        String sql = "UPDATE user SET active = 0 WHERE email = ?";
         
         boolean deleted;
         try {

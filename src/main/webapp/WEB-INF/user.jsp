@@ -15,23 +15,38 @@
     <body>
         <h1>User Management System</h1>
         
-        <table class ="table">
-            <thead>
-                <tr>
+        
+        <div class="Container">
+            <div class="row">
+                <div class="col">
+                <table class ="table">
+                 <thead>
+                    <tr>
                     <th>E-mail</th>
                     <th>First name</th>
                     <th>Last name</th>
-                </tr>
-            </thead>
+                    <th>Active</th>
+                    <th>Actions</th>
+                    </tr>
+                 </thead>
             <tbody>
                 <c:forEach var="users" items="${users}">
                     <tr>
                         <td>${user.email}</td>
                         <td>${user.firstName}</td>
                         <td>${user.lastName}</td>
+                        <td>${user.active ? "Y" : "N"}</td>
+                        <<td>
+                            <a href="">Edit<a/>
+                            <a href="">Delete<a/>
+                        </td>
                     </tr>
                 </c:forEach>
             </tbody>
         </table>
+        </div>
+        </div>
+        </div>
+                    
     </body>
 </html>
